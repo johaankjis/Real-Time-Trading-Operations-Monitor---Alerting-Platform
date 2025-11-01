@@ -51,7 +51,7 @@ export default function TradingOpsMonitor() {
         })
       }
     } catch (error) {
-      console.error("[v0] Initialization error:", error)
+      console.error("[] Initialization error:", error)
       toast({
         title: "Initialization Failed",
         description: "Could not initialize database",
@@ -77,7 +77,7 @@ export default function TradingOpsMonitor() {
         })
       }
     } catch (error) {
-      console.error("[v0] Start simulator error:", error)
+      console.error("[] Start simulator error:", error)
     }
   }
 
@@ -98,7 +98,7 @@ export default function TradingOpsMonitor() {
         })
       }
     } catch (error) {
-      console.error("[v0] Stop simulator error:", error)
+      console.error("[] Stop simulator error:", error)
     }
   }
 
@@ -126,7 +126,7 @@ export default function TradingOpsMonitor() {
       }
       if (incidentsData.success) setIncidents(incidentsData.data)
     } catch (error) {
-      console.error("[v0] Fetch metrics error:", error)
+      console.error("[] Fetch metrics error:", error)
     }
   }
 
@@ -152,7 +152,7 @@ export default function TradingOpsMonitor() {
       const alertsData = await alertsRes.json()
       if (alertsData.success) setAlerts(alertsData.data)
     } catch (error) {
-      console.error("[v0] Check alerts error:", error)
+      console.error("[] Check alerts error:", error)
     }
   }
 
@@ -165,7 +165,7 @@ export default function TradingOpsMonitor() {
         setSelectedRunbook(data.data)
       }
     } catch (error) {
-      console.error("[v0] Fetch runbook error:", error)
+      console.error("[] Fetch runbook error:", error)
     }
   }
 
@@ -177,7 +177,7 @@ export default function TradingOpsMonitor() {
         body: JSON.stringify({ action: type, config }),
       })
     } catch (error) {
-      console.error("[v0] Chaos control error:", error)
+      console.error("[] Chaos control error:", error)
     }
   }
 
